@@ -454,7 +454,7 @@ set(BASE_SRCS
   src/winfonts/winfnt.c
 )
 
-if (WIN32)
+if (WIN32 OR FORCE_WINDOWS)
   list(APPEND BASE_SRCS "builds/windows/ftsystem.c")
 elseif (UNIX)
   list(APPEND BASE_SRCS "builds/unix/ftsystem.c")
